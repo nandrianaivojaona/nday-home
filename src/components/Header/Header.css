@@ -1,0 +1,111 @@
+/* General Header Styles */
+.header {
+  background-color: #f8f9fa;
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Section */
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Welcome Text Section */
+.welcome-text {
+  flex: 1 1 auto;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Horizontal Menu Styles */
+.horizontal-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  position: relative; /* Ensure vertical menu is positioned relative to the parent */
+  padding: 10px 20px;
+  color: #333;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-item:hover > a {
+  color: #007bff;
+}
+/* Vertical Menu Styles */
+.vertical-menu {
+  position: absolute;
+  top: 100%; /* Position below the parent menu */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none !important; /* Force hiding by default */
+  flex-direction: column; /* Ensure vertical layout if using flex */
+}
+
+/* Show vertical menu when hovering over the parent menu */
+.menu-item:hover > .vertical-menu {
+  display: block !important; /* Show submenu on hover */
+}
+
+/* Vertical Menu Items */
+.vertical-menu li {
+  padding: 5px 15px;
+}
+
+.vertical-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.vertical-menu li a:hover {
+  color: #007bff;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .welcome-text {
+      text-align: left;
+      margin-top: 10px;
+  }
+
+  .horizontal-menu ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+}

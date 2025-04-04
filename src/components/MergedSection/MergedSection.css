@@ -1,0 +1,181 @@
+/* Merged Section Styles */
+.merged-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.submenu-container {
+  width: 25%;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.submenu a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Submenu Content Styles */
+.submenu-content {
+  width: 75%;
+  padding: 20px;
+}
+
+.hero-dynamic {
+  position: relative;
+  height: 300px;
+}
+
+
+.dynamic-content {
+  text-align: center;
+}
+/* Default animations */
+/* Rotating Globe Animation */
+.rotating-globe {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  animation: spin 11s infinite linear;
+  perspective: 1000px;
+}
+
+.globe-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.dropping-smartphone {
+  position: fixed;
+  top: 20%;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  animation: drop-sync 10s ease-in-out infinite;
+}
+
+.smartphone-image {
+  width: 70%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  background-color: transparent;
+}
+/* Stop animations when no-animation class is applied */
+.merged-section.no-animation .rotating-globe {
+  animation: none;
+}
+
+.merged-section.no-animation .dropping-smartphone {
+  animation: none;
+}
+/* Style the MergedSection to display content in three horizontal boxes. */
+
+.content-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.box {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.testimonies-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.testimonies-box li {
+  margin-bottom: 10px;
+}
+
+/* ======================
+   Keyframes
+   ====================== */
+   @keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes drop-sync {
+    0% {
+        transform: translate(-50%, -200px);
+        opacity: 0.5;
+    }
+    25% {
+        transform: translate(-50%, 200px);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(-50%, 100px);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, 200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 200px);
+        opacity: 0;
+    }
+}
+
+.dynamic-content {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .rotating-globe {
+      width: 150px;
+      height: 150px;
+  }
+
+  .smartphone-image {
+      width: 40px;
+  }
+}
