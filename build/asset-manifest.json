@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7afb6115.css",
+    "main.js": "/static/js/main.c4b4f21b.js",
+    "static/media/NdaY_community.png": "/static/media/NdaY_community.ca5b925566e6698e3923.png",
+    "static/media/Lulucon-Regular.ttf": "/static/media/Lulucon-Regular.f16a43fe581c0885ceff.ttf",
+    "index.html": "/index.html",
+    "main.7afb6115.css.map": "/static/css/main.7afb6115.css.map",
+    "main.c4b4f21b.js.map": "/static/js/main.c4b4f21b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7afb6115.css",
+    "static/js/main.c4b4f21b.js"
+  ]
+}
