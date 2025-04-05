@@ -3,8 +3,9 @@
   background-color: #f8f9fa;
   padding: 20px 40px;
   border-bottom: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #007bff, #0056b3);
 }
-
 .header-container {
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@
 }
 
 .logo {
-  height: 50px;
+  height: 100px;
   width: auto;
 }
 
@@ -26,7 +27,7 @@
   flex: 1 1 auto;
   text-align: center;
   font-size: 1.5rem;
-  color: #333;
+  color: #f4b4b4;
   font-weight: bold;
 }
 
@@ -46,14 +47,20 @@
 
 .menu-item a {
   text-decoration: none;
-  color: #333;
+  color: #d99c9c;
   font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
-
+.menu-item.active > a {
+  border-bottom: 2px solid #007bff;
+}
 .menu-item:hover {
   background-color: #f0f0f0;
 }
-
+.menu-item:hover a {
+  color: #007bff;
+  background-color: #f0f0f0;
+}
 .menu-item:hover > a {
   color: #007bff;
 }
@@ -70,11 +77,16 @@
   margin: 0;
   display: none !important; /* Force hiding by default */
   flex-direction: column; /* Ensure vertical layout if using flex */
+  opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Show vertical menu when hovering over the parent menu */
 .menu-item:hover > .vertical-menu {
   display: block !important; /* Show submenu on hover */
+  opacity: 1;
+    transform: translateY(0);
 }
 
 /* Vertical Menu Items */
