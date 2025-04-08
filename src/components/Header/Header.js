@@ -28,7 +28,7 @@ const Header = ({ activeMenu, handleMenuHover, handleSubmenuHover }) => {
                 {/* Logo Section */}
                 <div className="logo-container">
                     <img
-                        src="/assets/images/NdaY_Logo.png"
+                        src="/public/assets/images/NdaY_Logo.png"
                         alt="NdaY Logo"
                         className="logo"
                     />
@@ -36,7 +36,7 @@ const Header = ({ activeMenu, handleMenuHover, handleSubmenuHover }) => {
 
                 {/* Welcome Text */}
                 <div className="welcome-text">
-                    <h1>Welcome to NdaY' Enterprise</h1>
+                    <h1>Welcome to NdaY' Individual Enterprise</h1>
                     <p>Bridging Innovation and Community for a sustainable future.</p>
                 </div>
 

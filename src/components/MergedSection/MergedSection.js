@@ -66,7 +66,7 @@ while aligning with the vision of a connected world enjoying a high standard of 
     console.log('Selected Submenu:', selectedSubmenu); // Debug selected submenu
     console.log('Content:', content); // Debug fetched content
 
-    const isTesting = true; // Set to true to hide the dynamic background for testing
+    const isTesting = false; // not longer Set to true to hide the dynamic background for testing
 
     return (
         <section
@@ -101,8 +101,8 @@ while aligning with the vision of a connected world enjoying a high standard of 
                         <div className="hero-dynamic">
                             <div className="rotating-globe">
                                 <img
-                                    src="/assets/images/NdaY_Globe.png"
-                                    alt="Rotating Globe"
+                                    src="/public/assets/images/NdaY_Globe.png"
+                                    alt="Rotating Globe Behind"
                                     className="globe-image"
                                 />
                             </div>
